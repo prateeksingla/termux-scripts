@@ -1,4 +1,4 @@
-source ./secrets
+source ~/.shortcuts/secrets
 fingerprint_output=$(termux-fingerprint)
 secret=$gmail_prateek
 auth_result=$(echo "$fingerprint_output" | grep 'AUTH_RESULT')
