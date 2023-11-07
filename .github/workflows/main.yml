@@ -18,10 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: WKHTMLTOIMAGE
-        # You may pin to the exact commit or the version.
-        # uses: huseinayub/wkhtmltoimage-action@2bb8cc0fd92b61cd031e6b948d19d2331cc40e2f
-        uses: huseinayub/wkhtmltoimage-action@v1
-        with:
-          # List of hosts to run WKHTMLTOIMAGE against
-          list: hosts.txt
+    - name: screenshot-website
+      # You may pin to the exact commit or the version.
+      # uses: swinton/screenshot-website@ebee86398fa0b725f4080fd8a016d845211dd279
+      uses: swinton/screenshot-website@v1.0.0
+      with:
+        # Source of the content to be captured, may be a URL or HTML content
+        source: https://www.tickertape.in/market-mood-index
+        # The destination filename the captured website will be written to
+        destination: screenshot.png
