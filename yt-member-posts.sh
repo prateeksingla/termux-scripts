@@ -1,3 +1,4 @@
+gpg --quiet --batch --yes --decrypt --passphrase="$COOKIE" --output ./cookies.txt cookies.txt.gpg
 wget --load-cookies cookies.txt -k -O membership https://www.youtube.com/@AkshatZayn/membership
 grep 'contentText' membership > extracted_lines
 grep -oP 'contentText\K.*?(?=expandButton)' extracted_lines > final.txt
@@ -9,7 +10,7 @@ jq --raw-input --slurp '{"description":"An updated gist description","files":{"a
  | curl -L \
   -X PATCH \
   -H "Accept: application/vnd.github+json" \
-  -H "Authorization: [token]" \
+  -H "Authorization: $GHTOKEN" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/gists/GIST-ID \
+  https://api.github.com/gists/$GISTID \
   -d @-
