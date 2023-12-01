@@ -1,3 +1,5 @@
+#!/bin/bash
+cd $HOME/.shortcuts
 gpg --quiet --batch --yes --decrypt --passphrase="$COOKIE" --output ./cookies.txt cookies.txt.gpg
 wget --load-cookies cookies.txt -k -O membership https://www.youtube.com/@AkshatZayn/membership
 grep 'contentText' membership > extracted_lines
