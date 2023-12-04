@@ -16,3 +16,7 @@ jq --raw-input --slurp '{"description":"An updated gist description","files":{"a
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/gists/$GISTID \
   -d @-
+
+
+# Post text can also be directly accessed by accessing follwing javascript variable/element:
+# ytInitialData.contents.twoColumnBrowseResultsRenderer.tabs[0].tabRenderer.content.sectionListRenderer.contents[0].itemSectionRenderer.contents[0].backstagePostThreadRenderer.post.backstagePostRenderer.contentText.runs[0].text
