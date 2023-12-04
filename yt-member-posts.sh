@@ -20,3 +20,6 @@ jq --raw-input --slurp '{"description":"An updated gist description","files":{"a
 
 # Post text can also be directly accessed by accessing follwing javascript variable/element:
 # ytInitialData.contents.twoColumnBrowseResultsRenderer.tabs[0].tabRenderer.content.sectionListRenderer.contents[0].itemSectionRenderer.contents[0].backstagePostThreadRenderer.post.backstagePostRenderer.contentText.runs[0].text
+
+# Post image can also be directly accessed by accessing follwing javascript variable/element:
+# ytInitialData.contents.twoColumnBrowseResultsRenderer.tabs[0].tabRenderer.content.sectionListRenderer.contents[0].itemSectionRenderer.contents[0].backstagePostThreadRenderer.post.backstagePostRenderer.backstageAttachment.backstageImageRenderer.image.thumbnails[6].url
